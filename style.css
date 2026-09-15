@@ -1,0 +1,482 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e7,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e8d9ff,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #f8f0ff
+        );
+
+    overflow: hidden;
+
+    color: #4a2940;
+}
+
+
+/* Main container */
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Card */
+
+.love-card {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    padding: 45px 30px 25px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 25px 70px
+        rgba(114, 55, 92, .18);
+
+    animation: cardIn .8s ease;
+}
+
+
+/* Card animation */
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* Big emoji */
+
+.big-heart {
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+    animation: floating 2.5s infinite;
+}
+
+
+@keyframes floating {
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* Small title */
+
+.small-title {
+    color: #b35b86;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Headings */
+
+h1 {
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin: 0;
+}
+
+
+h2 {
+    color: #d94d83;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-top: 8px;
+}
+
+
+/* Message */
+
+.message {
+    max-width: 430px;
+
+    margin: 20px auto 28px;
+
+    line-height: 1.9;
+
+    color: #765b6b;
+}
+
+
+/* Buttons */
+
+.button-area {
+    min-height: 65px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.btn {
+    border-radius: 50px;
+
+    padding: 12px 25px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+
+/* YES */
+
+.yes-btn {
+    color: white;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f8b,
+            #c84cff
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(216,70,132,.28);
+}
+
+
+.yes-btn:hover {
+
+    color: white;
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+
+    box-shadow:
+        0 15px 30px
+        rgba(216,70,132,.38);
+}
+
+
+/* NO */
+
+.no-btn {
+    border: 1px solid #aaa;
+
+    background: white;
+
+    color: #555;
+
+    position: relative;
+
+    transition:
+        transform .35s,
+        opacity .5s;
+}
+
+
+/* Hint */
+
+#hint {
+    color: #a17b91;
+
+    font-size: 14px;
+
+    min-height: 25px;
+
+    margin-top: 15px;
+}
+
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}
+
+
+/* Promise */
+
+.promise-box {
+    max-width: 430px;
+
+    margin: 25px auto;
+
+    display: grid;
+
+    gap: 10px;
+}
+
+
+.promise-box div {
+
+    padding: 13px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,231,241,.7);
+
+    color: #69485c;
+}
+
+
+/* Next button */
+
+.next-btn {
+    width: 100%;
+
+    max-width: 430px;
+}
+
+
+/* Final message */
+
+.final-message {
+
+    max-width: 440px;
+
+    margin: 25px auto;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffdeea,
+            #edddff
+        );
+
+    line-height: 1.9;
+}
+
+
+.final-message strong {
+    color: #cf477d;
+}
+
+
+.confetti {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+.final-btn {
+    padding-left: 35px;
+
+    padding-right: 35px;
+}
+
+
+/* Footer */
+
+footer {
+
+    margin-top: 28px;
+
+    color: #aa8c9e;
+
+    font-size: 12px;
+}
+
+
+/* Floating hearts */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+
+.hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: .55;
+}
+animation: rise 9s linear infinite;
+}
+
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 17%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 29%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 42%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 55%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(6) {
+    left: 68%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(7) {
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.hearts span:nth-child(8) {
+    left: 90%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(9) {
+    left: 35%;
+    animation-delay: 7s;
+}
+
+
+@keyframes rise {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .55;
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            rotate(30deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .love-card {
+        padding: 35px 20px 22px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .big-heart {
+        font-size: 52px;
+    }
+
+    .button-area {
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+}

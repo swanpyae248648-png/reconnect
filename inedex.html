@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile ဖုန်းတွေအတွက် -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One More Chance 💗</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- ကိုယ်ရေးထားတဲ့ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💓</span>
+        <span>💞</span>
+        <span>❤️</span>
+        <span>💘</span>
+        <span>🌸</span>
+        <span>💗</span>
+    </div>
+
+
+    <!-- Main -->
+    <div class="container">
+
+        <div class="love-card text-center">
+
+            <!-- STEP 1 -->
+            <div id="step1">
+
+                <div class="big-heart">
+                    🥺💗
+                </div>
+
+                <p class="small-title">
+                    မေးခွန်းလေးမေးစရာရှိလို့.....
+                </p>
+
+                <h1>
+                    မောင်တို့...
+                </h1>
+
+                <h2>
+                    ပြန်တွဲကြမလား? 💕
+                </h2>
+
+                <p class="message">
+                    အရင်ကဖြစ်ခဲ့တာတွေကို ပြန်မပြောတော့ဘူး။
+                    ဒီတစ်ခါတော့ ပိုကောင်းအောင်
+                    ကြိုးစားပ့မယ်။
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="button-area">
+
+                    <button
+                        id="yesBtn"
+                        class="btn yes-btn"
+                        onclick="goStep2()"
+                    >
+                        တွဲမယ် 💗
+                    </button>
+
+                    <button
+                        id="noBtn"
+                        class="btn no-btn"
+                        onclick="noClick()"
+                    >
+                        မတွဲဘူး 😶
+                    </button>
+
+                </div>
+
+                <p id="hint">
+                    စဉ်းစားပြီးမှနှိပ်ပါနော်... 🥹
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 2 -->
+            <div id="step2" class="hidden">
+
+                <div class="big-heart">
+                    🥰🌷
+                </div>
+
+                <p class="small-title">
+                    STEP 2 OF 3
+                </p>
+
+                <h1>
+                    တကယ်လား? 💗
+                </h1>
+
+                <p class="message">
+                    ဒီတစ်ခါ အရင်လိုမဟုတ်ဘဲ
+                    နားလည်ပေးပြီး တန်ဖိုးထားပေးမယ်။
+                </p>
+
+
+                <div class="promise-box">
+
+                    <div>
+                        🤝 ပိုပြီးနားလည်ပေးမယ်
+                    </div>
+
+                    <div>
+                        💬 စိတ်ဆိုးရင် စကားပြောဖြေရှင်းမယ်
+                    </div>
+
+                    <div>
+                        🌷 မင်းကို တန်ဖိုးထားမယ်
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn yes-btn next-btn"
+                    onclick="goStep3()"
+                >
+                    နောက်တစ်ဆင့် သွားမယ် 💕
+                </button>
+
+            </div>
+
+
+
+            <!-- STEP 3 -->
+            <div id="step3" class="hidden">
+
+                <div class="big-heart">
+                    ❤️‍🩹💐
+                </div>
+
+                <p class="small-title">
+                    FINAL STEP
+                </p>
+
+                <h1>
+                    ဒါဆို...
+                </h1>
+
+                <h2>
+                    ငါတို့ ပြန်စကြမယ်နော်? ❤️
+                </h2>
+
+
+                <div class="final-message">
+
+                    <p>
+                        အတိတ်ကို ပြန်ပြင်လို့မရပေမယ့်
+                        ရှေ့ဆက်မယ့်နေ့တွေကိုတော့
+                        အတူတူ ပိုလှအောင်ရေးလို့ရတယ်။
+                    </p>
+
+                    <strong>
+                        Will you give us one more chance? 🥹💗
+                    </strong>
+
+                </div>
+                <div class="confetti">
+                    🎉 💗 🎉 💕 🎉
+                </div>
+
+
+                <button
+                    class="btn yes-btn final-btn"
+                    onclick="finalAnswer()"
+                >
+                     မောင်တို့အစက ပြန်စကြမယ်နော် 💖
+                </button>
+
+            </div>
+
+
+            <footer>
+                Made with a little courage & lots of love 💌
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
